@@ -1,42 +1,62 @@
 # Glossary
 
 ## B
-**Bonus roll(extra point)**
+**Base(initial area, initial place of respective color, staging area)**
+A storage where a set of pawns, waiting for its move. There are four bases.
+
+**Board**
+
+TODO
+
+**Bonus (Bonus Roll, Extra Point)**
+
 When a roll of six is made, the player earns a bonus roll.
 When a player makes a capture, the player earns a bonus roll.
 When a roll of six is made at a bonus roll, the player earns another bonus roll.
 When a third bonus roll is made in row, the player loses its turn.
 
 ## C
-**Capture**
+**Capture (Eat, Kill)**
 When an opponent's pawn reaches a square where a player's pawn presents and
 the player's pawn is the only in the square, a capture can be made.
-At a caputre, the pawn can be either startover or setback.
+At a caputre, the pawn may go back to its base, which is called "setback".
 
+## D
+**Doubled (Barrier, Blockage, Doubled Pawns, Doubled Pieces, Doubled Tokens, Jota)**
 
-The player's pawn goes back(capture/kill/eat) to its base and the player
-makes a roll. The player makes a roll. If the roll turns out six, then
-the pawn is placed to the starting square. If not, it goes back to the base, 
-this is called setback.
-The opponent gains a bonus roll.
+TODO
 
-At a capture, 
-When a pawn(token) makes a setback of its opponent.
+## E
+
+**Entry (Starting Area, Starting Point)**
+
+A first square out of a base.
+
+## F
+**Final Area (Final Point)**
+A storage where a pawn completes its trip and stays persistently.
+
+**Final Line**
+An ambiguous term, that refers to either Final Area or the last few squares
+to the Final Area.
+
+## H
+**Home**
+An ambiguous term, that refers to either final point or intial point.
+
+## P
+**Pawn (Piece, Token)**
+An agent of respective color that can make moves along the board.
 
 ## S
+**Safe (Safe Place, Safe Point, Safe Spot, Safe Zone, Star)**
+The capture cannot be made in a safe point. Any of colored six safe places
+protects a in-place pawn regardless of color. By color, there are two safe 
+places per player: starting point and the other, 8-square away from the
+starting point.
+
 **Setback**
-When an opponent's pawn reaches a square where a player's pawn presents.
-The player's pawn goes back(capture/kill/eat) to its base and the player
-makes a roll. The player makes a roll. If the roll turns out six, then
-the pawn is placed to the starting square. If not, it goes back to the base, 
-this is called setback.
-The opponent gains a bonus roll.
-
-**Star(Safe place, Safe point)**
-The setback cannot be made in the safe point.
-
-**Starting point**
-A first square out of a base.
+A base-returning pawn or such state.
 
 **Startover**
 A pawn is startover when it goes to the player's starting point by caputre.
