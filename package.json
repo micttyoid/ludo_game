@@ -2,7 +2,8 @@
   "name": "ludo_game",
   "type": "module",
   "scripts": {
-    "start": "node ./gameplay.js"
+    "start": "node ./main.js",
+    "start:old": "node ./gameplay.js"
   },
   "packageManager": "yarn@4.9.1"
 }

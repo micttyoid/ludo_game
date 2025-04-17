@@ -22,6 +22,7 @@ export function throwDice() {
         return
     }
 
+    // 6 allows a player to move a pawn
     if (score === 6) {
         carryForwardScoreCount++
         diceScore += score
@@ -50,6 +51,10 @@ export function getDiceScore() {
 }
 
 export function getDiceScoreArr() {
+    return diceScoreArr
+}
+
+export const get_dice_score_arr = () => {
     return diceScoreArr
 }
 

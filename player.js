@@ -17,7 +17,7 @@ export function changeCurrentPlayer() {
     }
 }
 
-export function currentPlayer() {
+export const current_player = () => {
     return Object.keys(players)[currentPlayerIndex]
 }
 
@@ -109,6 +109,9 @@ export function movePlayerPawn(player, diceScore) {
     return false
 }
 
+export const get_players = () => {
+    return players
+}
 export function getPlayers() {
     return players
 }

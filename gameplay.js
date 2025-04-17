@@ -11,7 +11,7 @@ import {
 } from './dice.js'
 import {
     changeCurrentPlayer,
-    currentPlayer,
+    current_player,
     validatePlayerMove,
     checkPlayerWin,
     checkOpponentsElimination,
@@ -39,11 +39,11 @@ async function readInput() {
         return 'display_score'
     }
 
-    let isPlayerMoveValid = validatePlayerMove(currentPlayer(), getDiceScore())
+    let isPlayerMoveValid = validatePlayerMove(current_player(), getDiceScore())
 
     if (!isPlayerMoveValid) {
         changeCurrentPlayer()
-        await renderGame('invalid_move')
+        await render_game('invalid_move')
         resetDiceScore()
         return
     } else {
@@ -73,12 +73,12 @@ async function readInput() {
 
                     if (scoreFound) {
                         isPlayerMoveValid = validatePlayerMove(
-                            currentPlayer(),
+                            current_player(),
                             answer
                         )
                         if (isPlayerMoveValid) {
                             const playerElimination = checkOpponentsElimination(
-                                currentPlayer(),
+                                current_player(),
                                 diceScore
                             )
 
@@ -111,7 +111,7 @@ async function readInput() {
                             if (diceArr.length <= 1) {
                                 return answer
                             } else {
-                                const updateMove = updateGame(answer)
+                                const updateMove = update_game(answer)
 
                                 if (!updateMove) {
                                     return
@@ -127,23 +127,23 @@ async function readInput() {
     }
 }
 
-async function updateGame(data) {
-    const isValidMove = validatePlayerMove(currentPlayer(), data)
+export const update_game = (data) => {
+    const isValidMove = validatePlayerMove(current_player(), data)
 
     if (!isValidMove) {
-        await renderGame('invalid_move')
+        render_game('invalid_move')
         resetDiceScore()
         changeCurrentPlayer()
         return
     }
 
-    movePlayerPawn(currentPlayer(), data)
+    movePlayerPawn(current_player(), data)
 
-    const playerWin = checkPlayerWin(currentPlayer())
+    const playerWin = checkPlayerWin(current_player())
 
     if (playerWin) {
-        await renderGame(currentPlayer())
-        removePlayerFromPlayers(currentPlayer())
+        render_game(current_player())
+        removePlayerFromPlayers(current_player())
     }
 
     reassignDiceScore(data)
@@ -154,24 +154,24 @@ async function updateGame(data) {
     }
 }
 
-async function renderGame(data) {
+export const render_game = (data) => {
     const playersPosition = getPlayers()
     const playersValue = getPlayersValue()
     if (data === 'display_score') {
-        console.log(`'${currentPlayer()}' score - '${getDiceScoreArr()}'`)
+        console.log(`'${current_player()}' score - '${getDiceScoreArr()}'`)
         return
     }
 
     if (data === 'invalid_move') {
         console.log(`'${getDiceScore()}' score is invalid at the current time'`)
         console.log('players position -', playersPosition, playersValue)
-        console.log('current player -', currentPlayer())
+        console.log('current player -', current_player())
         return
     }
 
     if (typeof data === 'number') {
         console.log('players position -', playersPosition, playersValue)
-        console.log('current player -', currentPlayer())
+        console.log('current player -', current_player())
         return
     }
 
@@ -188,23 +188,23 @@ async function renderGame(data) {
 
 async function gameloop() {
     const playersPosition = getPlayers()
-    console.log('current player -', currentPlayer())
+    console.log('current player -', current_player())
     console.log('players position -', playersPosition)
     let i = 0
     while (i < 100) {
         const data = await readInput()
 
         if (typeof data === 'number') {
-            updateGame(data)
-            await renderGame(data)
+            update_game(data)
+            await render_game(data)
         }
 
         if (data === 'display_score') {
-            await renderGame(data)
+            await render_game(data)
         }
 
         if (data === 'invalid_move') {
-            await renderGame(data)
+            await render_game(data)
         }
         i++
     }
