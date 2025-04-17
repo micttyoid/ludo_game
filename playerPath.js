@@ -58,80 +58,80 @@ const path = [
   49,
   50,
   51,
-];
+]
 
-const homePath = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6'];
+const homePath = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6']
 
 function addHomePathToPlayers(homePath, playerPath) {
-  for (let i = 0; i < homePath.length; i++) {
-    playerPath.push(homePath[i]);
+  for (let i = 0 i < homePath.length i++) {
+    playerPath.push(homePath[i])
   }
 }
 
 function generateRedRelativePath(generalPath, homePath) {
-  const result = [];
+  const result = []
 
-  for (let i = 0; i < generalPath.length - 1; i++) {
-    result.push(generalPath[i]);
+  for (let i = 0 i < generalPath.length - 1 i++) {
+    result.push(generalPath[i])
   }
 
-  addHomePathToPlayers(homePath, result);
+  addHomePathToPlayers(homePath, result)
 
-  return result;
+  return result
 }
 
 function generateGreenRelativePath(generalPath, homePath) {
-  const result = [];
+  const result = []
 
-  for (let i = 13; i < generalPath.length; i++) {
-    result.push(generalPath[i]);
+  for (let i = 13 i < generalPath.length i++) {
+    result.push(generalPath[i])
 
     if (i === generalPath.length - 1) {
-      for (let i = 0; i < 12; i++) {
-        result.push(generalPath[i]);
+      for (let i = 0 i < 12 i++) {
+        result.push(generalPath[i])
       }
     }
   }
 
-  addHomePathToPlayers(homePath, result);
+  addHomePathToPlayers(homePath, result)
 
-  return result;
+  return result
 }
 
 function generateYellowRelativePath(generalPath, homePath) {
-  const result = [];
+  const result = []
 
-  for (let i = 26; i < generalPath.length; i++) {
-    result.push(generalPath[i]);
+  for (let i = 26 i < generalPath.length i++) {
+    result.push(generalPath[i])
 
     if (i === generalPath.length - 1) {
-      for (let i = 0; i < 25; i++) {
-        result.push(generalPath[i]);
+      for (let i = 0 i < 25 i++) {
+        result.push(generalPath[i])
       }
     }
   }
 
-  addHomePathToPlayers(homePath, result);
+  addHomePathToPlayers(homePath, result)
 
-  return result;
+  return result
 }
 
 function generateBlueRelativePath(generalPath, homePath) {
-  const result = [];
+  const result = []
 
-  for (let i = 39; i < generalPath.length; i++) {
-    result.push(generalPath[i]);
+  for (let i = 39 i < generalPath.length i++) {
+    result.push(generalPath[i])
 
     if (i === generalPath.length - 1) {
-      for (let i = 0; i < 38; i++) {
-        result.push(generalPath[i]);
+      for (let i = 0 i < 38 i++) {
+        result.push(generalPath[i])
       }
     }
   }
 
-  addHomePathToPlayers(homePath, result);
+  addHomePathToPlayers(homePath, result)
 
-  return result;
+  return result
 }
 
 let playersPath = {
@@ -139,8 +139,8 @@ let playersPath = {
   green: generateGreenRelativePath(path, homePath),
   yellow: generateYellowRelativePath(path, homePath),
   blue: generateBlueRelativePath(path, homePath),
-};
+}
 
 module.exports = {
   playersPath,
-};
+}

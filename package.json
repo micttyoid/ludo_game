@@ -1,0 +1,7 @@
+{
+  "name": "ludo_game",
+  "scripts": {
+    "starts": "node ./gameplay.js"
+  },
+  "packageManager": "yarn@4.9.1"
+}
