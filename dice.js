@@ -3,16 +3,7 @@ let carryForwardScoreCount = 0
 let diceScoreArr = [3]
 let diceScoreCount = 1
 
-function generateRandomNumber() {
-    let number = Math.round(Math.random() * 6)
-
-    while (!number) {
-        number = Math.floor(Math.random() * 6)
-    }
-    return number
-}
-
-function throwDice() {
+export function throwDice() {
     const resetScore = isDiceScoreComplete()
 
     if (resetScore) {
@@ -21,7 +12,7 @@ function throwDice() {
         diceScoreArr = []
     }
 
-    const score = generateRandomNumber()
+    const score = Math.floor(Math.random() * 6) + 1
 
     if (carryForwardScoreCount === 3) {
         diceScore = 0
@@ -44,31 +35,7 @@ function throwDice() {
     diceScoreCount += 1
 }
 
-function getDiceScore() {
-    return diceScore
-}
-
-function getDiceScoreArr() {
-    return diceScoreArr
-}
-
-function reassignDiceScore(score) {
-    diceScore -= score
-    const newdiceArr = diceScoreArr.filter((element) => element !== score)
-
-    diceScoreArr = newdiceArr
-    diceScoreCount -= 1
-}
-
-function isPlayerMoveComplete() {
-    if (diceScoreCount) {
-        return false
-    }
-
-    return true
-}
-
-function isDiceScoreComplete() {
+export function isDiceScoreComplete() {
     const lastScore = diceScoreArr[diceScoreArr.length - 1]
 
     if (lastScore !== 6) {
@@ -78,18 +45,32 @@ function isDiceScoreComplete() {
     return false
 }
 
-function resetDiceScore() {
+export function getDiceScore() {
+    return diceScore
+}
+
+export function getDiceScoreArr() {
+    return diceScoreArr
+}
+
+export function reassignDiceScore(score) {
+    diceScore -= score
+    const newdiceArr = diceScoreArr.filter((element) => element !== score)
+
+    diceScoreArr = newdiceArr
+    diceScoreCount -= 1
+}
+
+export function isPlayerMoveComplete() {
+    if (diceScoreCount) {
+        return false
+    }
+
+    return true
+}
+
+export function resetDiceScore() {
     diceScore = 0
     diceScoreCount = 0
     diceScoreArr = []
-}
-
-module.exports = {
-    getDiceScore,
-    throwDice,
-    getDiceScoreArr,
-    isDiceScoreComplete,
-    resetDiceScore,
-    isPlayerMoveComplete,
-    reassignDiceScore,
 }

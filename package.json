@@ -1,7 +1,8 @@
 {
   "name": "ludo_game",
+  "type": "module",
   "scripts": {
-    "starts": "node ./gameplay.js"
+    "start": "node ./gameplay.js"
   },
   "packageManager": "yarn@4.9.1"
 }

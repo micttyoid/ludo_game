@@ -1,4 +1,4 @@
-const { playersPath } = require('./playerPath')
+import { playersPath } from './playerPath.js'
 
 let players = {
     red: 13,
@@ -9,7 +9,7 @@ let players = {
 
 let currentPlayerIndex = 0
 
-function changeCurrentPlayer() {
+export function changeCurrentPlayer() {
     if (currentPlayerIndex === Object.keys(players).length - 1) {
         currentPlayerIndex = 0
     } else {
@@ -17,11 +17,11 @@ function changeCurrentPlayer() {
     }
 }
 
-function currentPlayer() {
+export function currentPlayer() {
     return Object.keys(players)[currentPlayerIndex]
 }
 
-function validatePlayerMove(player, diceScore) {
+export function validatePlayerMove(player, diceScore) {
     const playerCurrentPosition = players[player]
 
     if (playerCurrentPosition === 0) {
@@ -40,7 +40,7 @@ function validatePlayerMove(player, diceScore) {
     }
 }
 
-function checkPlayerWin(player) {
+export function checkPlayerWin(player) {
     if (players[player] === 57) {
         return true
     }
@@ -48,7 +48,7 @@ function checkPlayerWin(player) {
     return false
 }
 
-function removePlayerFromPlayers(player) {
+export function removePlayerFromPlayers(player) {
     let playersList = Object.keys(players)
 
     let newPlayers = {}
@@ -62,7 +62,7 @@ function removePlayerFromPlayers(player) {
     players = newPlayers
 }
 
-function checkOpponentsElimination(player, diceScore) {
+export function checkOpponentsElimination(player, diceScore) {
     const playerPosition = players[player] + diceScore
     const playerValue = playersPath[player][playerPosition]
 
@@ -94,11 +94,11 @@ function checkOpponentsElimination(player, diceScore) {
     return result
 }
 
-function resetPlayer(player) {
+export function resetPlayer(player) {
     players[player] = 0
 }
 
-function movePlayerPawn(player, diceScore) {
+export function movePlayerPawn(player, diceScore) {
     const playerMoveValidated = validatePlayerMove(player, diceScore)
 
     if (playerMoveValidated) {
@@ -109,11 +109,11 @@ function movePlayerPawn(player, diceScore) {
     return false
 }
 
-function getPlayers() {
+export function getPlayers() {
     return players
 }
 
-function getPlayersValue() {
+export function getPlayersValue() {
     const result = {}
     const playerList = Object.keys(players)
 
@@ -122,17 +122,4 @@ function getPlayersValue() {
     )
 
     return result
-}
-
-module.exports = {
-    changeCurrentPlayer,
-    currentPlayer,
-    validatePlayerMove,
-    checkPlayerWin,
-    checkOpponentsElimination,
-    resetPlayer,
-    movePlayerPawn,
-    getPlayers,
-    removePlayerFromPlayers,
-    getPlayersValue,
 }

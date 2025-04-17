@@ -1,6 +1,6 @@
-const { askQuestion } = require('./gameplayUtils')
-const { getPlayers } = require('./player')
-const {
+import { askQuestion } from './gameplayUtils.js'
+import { getPlayers } from './player.js'
+import {
     throwDice,
     getDiceScore,
     getDiceScoreArr,
@@ -8,8 +8,8 @@ const {
     resetDiceScore,
     isPlayerMoveComplete,
     reassignDiceScore,
-} = require('./dice')
-const {
+} from './dice.js'
+import {
     changeCurrentPlayer,
     currentPlayer,
     validatePlayerMove,
@@ -19,7 +19,7 @@ const {
     movePlayerPawn,
     removePlayerFromPlayers,
     getPlayersValue,
-} = require('./player')
+} from './player.js'
 
 async function readInput() {
     const diceScore = getDiceScore()
