@@ -23,9 +23,9 @@ If a player makes six, a first or a second time in its turn, and all player's
 pawn(s) on square and Doubled(s) cannot forward since the number of squares
 before its Destination is less than six for each pawn on square and the number
 of square before its Destination is less than three for each Doubled, and the 
-player's Base is  empty, **none** of the players pawn(s) and Doubled(s) is 
-**forwardable**. Therefore, the turn is terminated and the next player takes a 
-turn.
+player's Base is  empty, **none** of the players pawn(s) on square and
+Doubled(s) is **forwardable**. Therefore, the turn is terminated and the next 
+player takes a turn.
 
 ## The Rule of Six
 
