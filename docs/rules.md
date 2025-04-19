@@ -36,8 +36,7 @@ the player has following options:
 2. One of the player's forwardable pawn(s) on square by six and take another
    roll.
 
-3. One of the player's forwardable Doubled(s) on square by three and take 
-   another roll.
+3. One of the player's forwardable Doubled(s) by three and take another roll.
 
 4. If the player's Base is empty and the player has neither forwardable pawn,
    nor forwardable Doubled, the turn is terminated and the next player takes 
