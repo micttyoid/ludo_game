@@ -19,13 +19,12 @@ before its Destination, the pawn is **not forwardable**.
 
 **Example: _Rule of Six_**
 
-If a player makes six, a first or a second time in its turn, and all player's
-pawn(s) on square and Doubled(s) cannot forward since the number of squares
-before its Destination is less than six for each pawn on square and the number
+If a player makes six, a second time in its turn, and all player's pawn(s) 
+on square and Doubled(s) cannot forward since the number of squares before 
+its Destination is less than six for each pawn on square and the number
 of square before its Destination is less than three for each Doubled, and the 
 player's Base is  empty, **none** of the players pawn(s) on square and
-Doubled(s) is **forwardable**. Therefore, the player takes the third(last) 
-roll.
+Doubled(s) is **forwardable**. Therefore, the player takes the last roll.
 
 ## The Rule of Six
 
@@ -42,7 +41,7 @@ the player has following options:
    another roll.
 
 4. If the player's Base is empty and the player has neither forwardable pawn,
-   nor forwardable Doubled, the player takes the third roll(wasted).
+   nor forwardable Doubled, the player takes another roll.
 
 If a player makes a die of six, **a third time** in its turn,
 the turn is terminated and the next player takes a turn.
