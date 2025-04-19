@@ -24,8 +24,8 @@ pawn(s) on square and Doubled(s) cannot forward since the number of squares
 before its Destination is less than six for each pawn on square and the number
 of square before its Destination is less than three for each Doubled, and the 
 player's Base is  empty, **none** of the players pawn(s) on square and
-Doubled(s) is **forwardable**. Therefore, the turn is terminated and the next 
-player takes a turn.
+Doubled(s) is **forwardable**. Therefore, the player takes the third(last) 
+roll.
 
 ## The Rule of Six
 
@@ -35,17 +35,17 @@ the player has following options:
 1. If an idle pawn exists in the player's Base, the player may enter it and
    take another roll.
 
-2. One of the player's forwardable pawn(s) on square by six and take another
-   roll.
+2. Forward one of the player's forwardable pawn(s) on square by six and take
+   another roll.
 
-3. One of the player's forwardable Doubled(s) by three and take another roll.
+3. Forward one of the player's forwardable Doubled(s) by three and take 
+   another roll.
 
 4. If the player's Base is empty and the player has neither forwardable pawn,
-   nor forwardable Doubled, the turn is terminated and the next player takes 
-   a turn.
+   nor forwardable Doubled, the player takes the third(last) roll.
 
 If a player makes a die of six, **a third time** in its turn,
-the turn is terminated and the next player takes a turn.   
+the turn is terminated and the next player takes a turn.
 
 ## Doubled
 
