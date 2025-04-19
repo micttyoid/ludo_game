@@ -4,6 +4,18 @@
 **Date:**: 2025-04-17
 **Status**: Draft
 
+## The Rule of Six
+
+If a player makes a die of six, **a first or a second time** in its turn,
+the player has following options:
+
+1. If an idle pawn exists in the player's Base, enter it and take another roll.
+2. Forward any one of respective pawn(s) on square by six and take another roll.
+3. Forward any one of Doubled(s) on square by three and take another roll.
+
+If a player makes a die of six, **a third time** in its turn,
+the turn is terminated and the next player takes a turn.
+
 ## Doubled
 
 **Moves**
@@ -38,12 +50,3 @@ the following conditions:
 1. The target pawn is not on a Safe.
 
 2. The target pawn is not the part of a Doubled(Jota)
-
-
-## When the "Rule of Six" does not hold
-
-**Doubled**
-
-TODO
-
-
