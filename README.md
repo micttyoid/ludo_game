@@ -7,7 +7,7 @@
 
 ## Board Layout
 
-![Board Image](images/board.png)
+![Board Image](images/board.jpg)
 
 ## Start
 
@@ -15,7 +15,7 @@
 yarn start
 ```
 
-## QnA
+## Q&A
 
 **It is not working**
 
