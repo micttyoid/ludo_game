@@ -1,7 +1,7 @@
 # Rules of Ludo
 
-**Author:**: Luke Yoo &lt;[w.lukeyoo@gmail.com](mailto:w.lukeyoo@gmail.com)&gt;
-**Date:**: 2025-04-17
+**Author**: Luke Yoo &lt;[w.lukeyoo@gmail.com](mailto:w.lukeyoo@gmail.com)&gt;
+**Date**: 2025-04-17
 **Status**: Draft
 
 ## Forwardability
@@ -42,7 +42,7 @@ the player has following options:
    another roll.
 
 4. If the player's Base is empty and the player has neither forwardable pawn,
-   nor forwardable Doubled, the player takes the third(last) roll.
+   nor forwardable Doubled, the player takes the third roll(wasted).
 
 If a player makes a die of six, **a third time** in its turn,
 the turn is terminated and the next player takes a turn.
