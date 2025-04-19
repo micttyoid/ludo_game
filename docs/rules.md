@@ -4,18 +4,47 @@
 **Date:**: 2025-04-17
 **Status**: Draft
 
+## Forwardability
+
+The forwardability is defined by following:
+
+1. If the value of die is more than the number of squares left to a pawn on square
+before its Destination, the pawn is **not forwardable**.
+
+2. If the value of die is even and the half is more than the number of squares
+   left to a Doubled before its Destination, the Doubled is **not forwardable**.
+
+3. Any other pawn(s) on square or Doubled that are none of the conditions of
+   the statement 1 and the statement 2, the pawn or Doubled is **forwardable**.
+
+**Example: _Rule of Six_**
+
+If a player makes six, a first or a second time in its turn, and all player's
+pawn(s) on square and Doubled(s) cannot forward since the number of squares
+before its Destination is less than six for each, and the player's Base is 
+empty, **none** of the players pawn(s) and Doubled(s) is **forwardable**. Therefore,
+the turn is terminated and the next player takes a turn.
+
 ## The Rule of Six
 
 If a player makes a die of six, **a first or a second time** in its turn,
 the player has following options:
 
-1. If an idle pawn exists in the player's Base, enter it and take another roll.
-2. Forward one of the player's pawn(s) on square by six and take another roll.
-3. Forward one of the player's Doubled(s) on square by three and take another 
-roll.
+1. If an idle pawn exists in the player's Base, the player may enter it and
+   take another roll.
+
+2. One of the player's forwardable pawn(s) on square by six and take another
+   roll.
+
+3. One of the player's forwardable Doubled(s) on square by three and take 
+   another roll.
+
+4. If the player's Base is empty and the player has neither forwardable pawn,
+   nor forwardable Doubled, the turn is terminated and the next player takes 
+   a turn.
 
 If a player makes a die of six, **a third time** in its turn,
-the turn is terminated and the next player takes a turn.
+the turn is terminated and the next player takes a turn.   
 
 ## Doubled
 
